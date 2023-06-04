@@ -47,8 +47,8 @@ function chatStripe(isAi, value, uniqueId) {
             <div class="chat">
                 <div class="profile">
                     <img 
-                        src=${isAi ? bot : user} 
-                        alt="${isAi ? "bot" : "user"}" 
+                      src=${isAi ? bot : user} 
+                      alt="${isAi ? "bot" : "user"}" 
                     />
                 </div>
                 <div class="message" id=${uniqueId}>${value}</div>
@@ -80,7 +80,8 @@ const handleSubmit = async (e) => {
 
   // messageDiv.innerHTML = "..."
   loader(messageDiv);
-  const response = await fetch('https://codex-vriy.onrender.com', {
+
+  const response = await fetch("https://codex-vriy.onrender.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -101,7 +102,7 @@ const handleSubmit = async (e) => {
   } else {
     const err = await response.text();
 
-    messageDiv.innerHTML = "Pas de réponse pour le moment";
+    messageDiv.innerHTML = "Something went wrong";
     alert(err);
   }
 };
