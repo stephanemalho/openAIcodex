@@ -17,7 +17,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'Hello from CodeX!'
+    message: 'Hello from CodeX :)!'
   })
 })
 
@@ -41,7 +41,7 @@ app.post('/', async (req, res) => {
 
   } catch (error) {
     console.error(error)
-    res.status(500).send(error || 'Erreur server');
+    res.status(500).send(error || 'Erreur openai server');
     console.log(error);
   }
 })
